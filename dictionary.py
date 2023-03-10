@@ -5,14 +5,25 @@ user = {
     "tanggal_lahir": ["1902-03-23", "1876-08-16","1884-10-07"],
 }
 
-nama = [input("masukkan nama anda: ")]
-nik = [input("Masukkan NIK Anda: ")]
-jenis_kelamin = [input("Masukkan jenis kelamin Anda: ")]
-tanggal_lahir = [input("Masukkan tanggal lahir Anda (format: yyyy-mm-dd): ")]
+# nama = [input("masukkan nama anda: ")]
+# nik = [input("Masukkan NIK Anda: ")]
+# jenis_kelamin = [input("Masukkan jenis kelamin Anda: ")]
+# tanggal_lahir = [input("Masukkan tanggal lahir Anda (format: yyyy-mm-dd): ")]
 
-user["nama"] += nama
-user["nik"] += nik
-user["jenis_kelamin"] += jenis_kelamin
-user["tanggal_lahir"] += tanggal_lahir
+# user["nama"] += nama
+# user["nik"] += nik
+# user["jenis_kelamin"] += jenis_kelamin
+# user["tanggal_lahir"] += tanggal_lahir
 
 print(user['nama'])
+
+pencarian = input("masukan pencarian nama: ")
+
+
+if pencarian in user['nama']:
+    print(f"Nama: {pencarian}")
+    print(f"NIK: {user['nik']}")
+    print(f"Jenis Kelamin: {user['jenis_kelamin']}")
+    print(f"Tanggal Lahir: {user['tanggal_lahir']}")
+else:
+    print("data tidak ada")
